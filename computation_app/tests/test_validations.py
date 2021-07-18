@@ -3,6 +3,7 @@ import pytest
 from computation_app.errors import INVALID_DATATYPE, INVALID_OPERATOR
 from computation_app import validations
 
+
 @pytest.mark.parametrize("value, expected", [
     (1, False),
     (-1.5, False),

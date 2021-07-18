@@ -22,5 +22,5 @@ from computation_app import operations
                              (-1.2, 0, 'division', "Division by zero is not allowed"),
                              (-1.2, 1, 'division', -1.2)
                          ])
-def test_cleanse_data(value_1, value_2, operation, expected):
+def test_operations(value_1, value_2, operation, expected):
     assert expected == operations.MAPPINGS[operation](value_1, value_2)
