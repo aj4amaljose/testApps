@@ -1,8 +1,7 @@
-import pytest
-from computation_app.computation_app.errors import INVALID_DATATYPE, INVALID_OPERATOR
-from computation_app.computation_app import validations
 import os
-
+import pytest
+from computation_app.errors import INVALID_DATATYPE, INVALID_OPERATOR
+from computation_app import validations
 
 @pytest.mark.parametrize("value, expected", [
     (1, False),
@@ -36,9 +35,9 @@ def test_is_file_excel(file_path, expected):
 
 
 @pytest.mark.parametrize("file_path, expected", [
-    (os.path.dirname(os.path.abspath(__file__)), True),
+    (os.path.abspath(__file__), True),
     (r"c:/test85485/test.py", False),
 ]
                          )
-def test_is_folder_exists(file_path, expected):
-    assert expected == validations.is_folder_exists(file_path)
+def test_is_file_exists(file_path, expected):
+    assert expected == validations.is_file_exists(file_path)

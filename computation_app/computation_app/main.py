@@ -3,13 +3,11 @@ Main Module
 """
 import os
 import logging
-from computation_app.computation_app import utils, operations, validations, errors
+from computation_app import utils, operations, validations, errors
 
 logging.basicConfig(level=logging.DEBUG)
 
-INPUT_FILE_PATH = r'C:\Copy of Sample Input.xlsx'
-OUTPUT_FOLDER_PATH = r'C:\test2'
-OUTPUT_FILE_NAME = 'output.xlsx'
+
 VALID_HEADERS = ['x', 'y', 'operation', 'result']
 
 
@@ -111,6 +109,9 @@ def handle_file(input_file_path, output_folder_path, output_file_name):
 
 
 if __name__ == '__main__':
+    INPUT_FILE_PATH = r'C:\Copy of Sample Input.xlsx'
+    OUTPUT_FOLDER_PATH = r'C:\test'
+    OUTPUT_FILE_NAME = 'output.xlsx'
     handle_file(input_file_path=INPUT_FILE_PATH,
                 output_folder_path=OUTPUT_FOLDER_PATH,
                 output_file_name=OUTPUT_FILE_NAME)

@@ -1,5 +1,5 @@
 import pytest
-from computation_app.computation_app import operations
+from computation_app import operations
 
 
 @pytest.mark.parametrize("value_1, value_2, operation, expected",
